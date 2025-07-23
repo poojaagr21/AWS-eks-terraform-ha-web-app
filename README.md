@@ -1,5 +1,4 @@
 
-// START GENAI
 # Multi-Cloud HA Demo
 
 ## What does this project do?
@@ -13,7 +12,6 @@ This project demonstrates a simple, highly available web application deployed on
 - **Terraform:** Infrastructure as Code for provisioning clusters and resources
 - **Kubernetes:** For container orchestration and app deployment
 - **AWS Route53:** DNS failover and health checks
-- **GitHub Actions:** (Optional) CI/CD automation
 
 ## Why this approach?
 
@@ -21,4 +19,4 @@ This project demonstrates a simple, highly available web application deployed on
 - **Resilience:** DNS-based health checks and failover keep the service available even if a region or provider fails.
 - **Modern DevOps Practice:** Demonstrates use of IaC, managed K8s, and CI/CD, mirroring real-world SRE/DevOps workflows.
 
-// END GENAI
+
