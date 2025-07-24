@@ -21,4 +21,3 @@ EKS cluster creation is in progress!
 i am about to have a running Kubernetes cluster on AWS, ready for deploying my demo app.
 What’s Next?
 After EKS is ready, i will configure kubectl access and deploy a sample app.
-(Optional for full project:) i will repeat similar steps on GCP, then add DNS failover.
