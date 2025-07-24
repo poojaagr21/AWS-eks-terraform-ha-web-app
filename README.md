@@ -1,22 +1,34 @@
+## Overview
 
-# Multi-Cloud HA Demo
+This project demonstrates how to provision a highly available [AWS EKS (Elastic Kubernetes Service)](https://aws.amazon.com/eks/) cluster using [Terraform](https://www.terraform.io/) and deploy a sample "Hello World" application to it.
 
-## What does this project do?
+**Note:**  
+While multi-cloud high-availability is a valuable topic, this project focuses on AWS EKS only for clarity, reliability, and due to environment constraints (e.g., AWS CloudShell disk space limits). Multi-cloud expansion is possible in the future.
 
-This project demonstrates a simple, highly available web application deployed on both AWS (EKS) and GCP (GKE) Kubernetes clusters. The application is exposed via cloud load balancers, and DNS failover (using AWS Route53) ensures users are always directed to a healthy endpoint, even if one provider goes down.
+## Project Goals
+
+- Automate EKS cluster creation using Terraform.
+- Deploy a Kubernetes application (Hello World) on AWS.
+- Expose the app via an AWS LoadBalancer and test connectivity.
+- Document the setup, troubleshooting, and outcomes.
 
 ## Tech Stack
 
-- **AWS EKS:** Managed Kubernetes cluster on AWS
-- **GCP GKE:** Managed Kubernetes cluster on Google Cloud
-- **Terraform:** Infrastructure as Code for provisioning clusters and resources
-- **Kubernetes:** For container orchestration and app deployment
-- **AWS Route53:** DNS failover and health checks
+- AWS EKS (Kubernetes)
+- Terraform (Infrastructure as Code)
+- AWS CLI & kubectl
 
-## Why this approach?
+## Quick Start
 
-- **High Availability:** Deploying across multiple clouds reduces the risk of downtime due to a single provider outage.
-- **Resilience:** DNS-based health checks and failover keep the service available even if a region or provider fails.
-- **Modern DevOps Practice:** Demonstrates use of IaC, managed K8s, and CI/CD, mirroring real-world SRE/DevOps workflows.
+1. **Provision EKS with Terraform:**  
+   - See [`main.tf`](./main.tf) and [`variables.tf`](./variables.tf) for configuration.
+   - Run:
+     ```sh
+     terraform init
+     terraform apply -auto-approve
+     ```
 
-
+2. **Configure kubectl:**
+   ```sh
+   aws eks update-kubeconfig --region <your-region> --name <your-cluster-name>
+   kubectl get nodes
