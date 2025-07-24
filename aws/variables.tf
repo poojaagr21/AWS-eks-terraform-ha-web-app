@@ -6,10 +6,11 @@ variable "region" {
       default = "eks-ha-demo"
     }
 
-    variable "node_instance_type" {
-        default = "t3.medium"
-      }
 
       variable "desired_capacity" {
           default = 1
         }
+        variable "node_instance_type" {
+            default = "t3.micro"
+          }
+
