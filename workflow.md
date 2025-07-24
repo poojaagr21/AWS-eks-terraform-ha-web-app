@@ -6,7 +6,7 @@ Cleaned up .gitignore to ignore files that don’t belong in version control (li
 Wrote Terraform code (main.tf, variables.tf, etc.) to define an Amazon EKS (Elastic Kubernetes Service) cluster.
 Chose the latest, recommended open-source EKS module (terraform-aws-modules/eks/aws).
 Specified which AWS region and which subnets to use, making sure only AWS-supported subnets/AZs are used for EKS.
-Why:Terraform lets you define and manage cloud infrastructure as code, so you can automate, version, and repeat deployments.
+Why:Terraform let us define and manage cloud infrastructure as code, so i can automate, version, and repeat deployments.
 4. Disk Space Management in CloudShell
 Cleaned up unnecessary files from  environment (like old projects, installers, and caches) to make enough room for Terraform and EKS.
 5. Debugging & Fixes
