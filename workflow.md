@@ -1,6 +1,5 @@
 1. Project Setup
-Goal: Show how to make a highly available web app by deploying to both AWS and (eventually) GCP.
-Why: Demonstrates multi-cloud skills and failover resilience.
+Goal: Show how to make a highly available web app by deploying to both AWS 
 2. Repository Organization
 Cleaned up .gitignore to ignore files that don’t belong in version control (like Terraform caches).
 3. AWS Infrastructure as Code (Terraform)
